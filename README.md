@@ -8,3 +8,5 @@ Check for version in main.yml.
 
 # Software Engineering Methods
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/YeminthanRiki/sem/main.yml/develop?style=flat-square)
+
+![GitHub](https://img.shields.io/badge/GitHub-Click%20Me-blue?style=flat-square&logo=github)](https://github.com)
