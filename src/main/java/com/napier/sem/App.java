@@ -1,8 +1,7 @@
 package com.napier.sem;
-import com.mysql.cj.x.protobuf.MysqlxExpect;
-import java.util.ArrayList;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class App {
     private Connection con = null;
@@ -119,7 +118,6 @@ public class App {
             return null;
         }
     }
-
 
 
 //
@@ -277,12 +275,11 @@ public class App {
 
     /**
      * Gets all the current employees and salaries.
+     *
      * @return A list of all employees and salaries, or null if there is an error.
      */
-    public ArrayList<Employee> getAllSalaries()
-    {
-        try
-        {
+    public ArrayList<Employee> getAllSalaries() {
+        try {
             // Create an SQL statement
             Statement stmt_ = con.createStatement();
             // Create string for SQL statement
@@ -295,8 +292,7 @@ public class App {
             ResultSet rset = stmt_.executeQuery(strSelect_);
             // Extract employee information
             ArrayList<Employee> employees = new ArrayList<Employee>();
-            while (rset.next())
-            {
+            while (rset.next()) {
                 Employee emp = new Employee();
                 emp.emp_no = rset.getInt("employees.emp_no");
                 emp.first_name = rset.getString("employees.first_name");
@@ -305,9 +301,7 @@ public class App {
                 employees.add(emp);
             }
             return employees;
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Failed to get salary details");
             return null;
@@ -315,15 +309,13 @@ public class App {
     }
 
 
-
     /**
      * Gets all the current employees and salaries by role
+     *
      * @return A list of all employees and salaries, or null if there is an error.
      */
-    public ArrayList<Employee> getSalariesByRole()
-    {
-        try
-        {
+    public ArrayList<Employee> getSalariesByRole() {
+        try {
             // Create an SQL statement
             Statement stmt_ = con.createStatement();
             // Create string for SQL statement
@@ -340,8 +332,7 @@ public class App {
             ResultSet rset = stmt_.executeQuery(strSelect_);
             // Extract employee information
             ArrayList<Employee> employees = new ArrayList<Employee>();
-            while (rset.next())
-            {
+            while (rset.next()) {
                 Employee emp = new Employee();
                 emp.emp_no = rset.getInt("employees.emp_no");
                 emp.first_name = rset.getString("employees.first_name");
@@ -350,9 +341,7 @@ public class App {
                 employees.add(emp);
             }
             return employees;
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Failed to get salary details by role");
             return null;
@@ -361,15 +350,14 @@ public class App {
 
     /**
      * Prints a list of employees.
+     *
      * @param employees The list of employees to print.
      */
-    public void printSalaries(ArrayList<Employee> employees)
-    {
+    public void printSalaries(ArrayList<Employee> employees) {
         // Print header
         System.out.println(String.format("%-10s %-15s %-20s %-8s", "Emp No", "First Name", "Last Name", "Salary"));
         // Loop over all employees in the list
-        for (Employee emp : employees)
-        {
+        for (Employee emp : employees) {
             String emp_string =
                     String.format("%-10s %-15s %-20s %-8s",
                             emp.emp_no, emp.first_name, emp.last_name, emp.salary);
@@ -377,10 +365,8 @@ public class App {
         }
     }
 
-    public void displayEmployee(Employee emp)
-    {
-        if (emp != null)
-        {
+    public void displayEmployee(Employee emp) {
+        if (emp != null) {
             System.out.println(
                     emp.emp_no + " "
                             + emp.first_name + " "
@@ -392,8 +378,7 @@ public class App {
         }
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // Create new Application
         App a = new App();
 
@@ -413,8 +398,10 @@ public class App {
         a.printSalaries(employees);
 
 
-
         // Disconnect from database
         a.disconnect();
+    }
+
+    public void method() {
     }
 }
