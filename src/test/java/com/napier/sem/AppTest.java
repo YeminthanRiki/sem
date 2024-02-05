@@ -53,5 +53,18 @@ public class AppTest
         app.printSalaries(employees);
     }
 
+    @Test
+    void displayEmployeeTestNull()
+    {
+        app.displayEmployee(null);
+    }
+
+    @Test
+    void displayEmployeeTestCotainsNull()
+    {
+        ArrayList<Employee> emp = new ArrayList<Employee>();
+        emp.add(null);
+        app.printSalaries(emp);
+    }
 
 }

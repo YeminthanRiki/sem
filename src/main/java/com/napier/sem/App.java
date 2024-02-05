@@ -447,7 +447,7 @@ public class App {
         // Check employees is not null
         if (emp == null)
         {
-            System.out.println("No employees");
+            System.out.println("No employees to display");
             return;
         }
         if (emp != null) {
