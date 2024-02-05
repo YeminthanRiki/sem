@@ -479,19 +479,19 @@ public class App {
         }
 
         // Get Employee by ID
-        Employee emp = a.getEmployee(255530);
-        // Display results
-        a.displayEmployee(emp);
-
+//        Employee emp = a.getEmployee(255530);
+//        // Display results
+//        a.displayEmployee(emp);
+//
         // Get all employees' salaries
         ArrayList<Employee> employees = a.getSalariesByRole();
         // Test the size of the returned data - should be 240124
         System.out.println(employees.size());
         a.printSalaries(employees);
 
-        // Get salaries by department name
-        ArrayList<Employee> allSalary = a.getDepartment("Sales");
-        a.printSalaries(allSalary);
+//        // Get salaries by department name
+//        ArrayList<Employee> allSalary = a.getDepartment("Sales");
+//        a.printSalaries(allSalary);
 
         // Disconnect from database
         a.disconnect();
