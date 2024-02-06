@@ -10,3 +10,4 @@ Check for version in main.yml.
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/YeminthanRiki/sem/main.yml/develop?style=flat-square)
 
 [![codecov](https://codecov.io/gh/YeminthanRiki/sem/graph/badge.svg?token=7QB9FSIQHX)](https://codecov.io/gh/YeminthanRiki/sem)
+
