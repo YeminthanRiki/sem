@@ -11,3 +11,4 @@ Check for version in main.yml.
 
 [![codecov](https://codecov.io/gh/YeminthanRiki/sem/graph/badge.svg?token=7QB9FSIQHX)](https://codecov.io/gh/YeminthanRiki/sem)
 
+Test local
