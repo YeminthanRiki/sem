@@ -40,6 +40,7 @@ public class AppIntegrationTest
         // For example, if you know the size of the result should be a certain value
         assertEquals(240124, salaryList.size());
 
+
 //        Employee Employee = salaryList.get(0);
 //        assertEquals(expectedFirstName, firstEmployee.getFirstName());
 //        assertEquals(expectedLastName, firstEmployee.getLastName());
@@ -59,5 +60,4 @@ public class AppIntegrationTest
         assertEquals(emp.first_name, "Kevin");
         assertEquals(emp.last_name, "Chalmers");
     }
-
 }
